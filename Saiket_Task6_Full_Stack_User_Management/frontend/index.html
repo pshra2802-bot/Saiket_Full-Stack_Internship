@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task 6 - User Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>User Management System</h1>
+            <p>Saiket Systems - Full Stack Development Internship</p>
+        </header>
+
+        <section class="form-section">
+
+            <h2 id="formTitle">Add New User</h2>
+
+            <form id="userForm">
+
+                <input type="hidden" id="userId">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter user name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email address"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Enter age"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Add User
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelButton"
+                    class="cancel-button"
+                    style="display: none;"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="users-section">
+
+            <div class="section-header">
+                <h2>Users</h2>
+
+                <button id="refreshButton">
+                    Refresh Users
+                </button>
+            </div>
+
+            <div id="message"></div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="userTableBody">
+                        <!-- Users will be displayed here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
